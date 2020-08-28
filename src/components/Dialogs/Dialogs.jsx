@@ -25,6 +25,8 @@ const Dialogs = (props) => {
         {id: 6, name: 'Valera'}
         ];
 
+    let dialogsElements = dialogsData.map(dialog => <DialogItem name={dialog.name} id={dialog.id}/>);
+
     let MessagesData = [
         {id: 1, message: 'Hi'},
         {id: 2, message: 'How are you?'},
@@ -37,21 +39,24 @@ const Dialogs = (props) => {
     return (
         <div className={s.dialogs}>
             <div className={s.dialogsItems}>
-                <DialogItem name={dialogsData[0].name} id={dialogsData[0].id}/>
-                <DialogItem name={dialogsData[1].name} id={dialogsData[1].id}/>
-                <DialogItem name={dialogsData[2].name} id={dialogsData[2].id}/>
-                <DialogItem name={dialogsData[3].name} id={dialogsData[3].id}/>
-                <DialogItem name="Sasha" id="4"/>
-                <DialogItem name="Viktor" id="5"/>
-                <DialogItem name="Valera" id="6"/>
+
+                {dialogsElements}
+
+                {/*<DialogItem name={dialogsData[0].name} id={dialogsData[0].id}/>*/}
+                {/*<DialogItem name={dialogsData[1].name} id={dialogsData[1].id}/>*/}
+                {/*<DialogItem name={dialogsData[2].name} id={dialogsData[2].id}/>*/}
+                {/*<DialogItem name={dialogsData[3].name} id={dialogsData[3].id}/>*/}
+                {/*<DialogItem name="Sasha" id="4"/>*/}
+                {/*<DialogItem name="Viktor" id="5"/>*/}
+                {/*<DialogItem name="Valera" id="6"/>*/}
             </div>
             <div className={s.messages}>
-                <Message message={MessagesData[0].message} id={MessagesData[0].id}/>
-                <Message message={MessagesData[1].message} id={MessagesData[1].id}/>
-                <Message message={MessagesData[2].message} id={MessagesData[2].id}/>
-                <Message message={MessagesData[3].message} id={MessagesData[3].id}/>
-                <Message message={MessagesData[4].message} id={MessagesData[4].id}/>
-                <Message message={MessagesData[5].message} id={MessagesData[5].id}/>
+                {/*<Message message={MessagesData[0].message} id={MessagesData[0].id}/>*/}
+                {/*<Message message={MessagesData[1].message} id={MessagesData[1].id}/>*/}
+                {/*<Message message={MessagesData[2].message} id={MessagesData[2].id}/>*/}
+                {/*<Message message={MessagesData[3].message} id={MessagesData[3].id}/>*/}
+                {/*<Message message={MessagesData[4].message} id={MessagesData[4].id}/>*/}
+                {/*<Message message={MessagesData[5].message} id={MessagesData[5].id}/>*/}
             </div>
         </div>
     )
