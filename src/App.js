@@ -11,15 +11,13 @@ import Settings from "./components/Settings/Settings";
 
 const App = (props) => {
 
-    debugger;
-
     return (
         <BrowserRouter>
             <div className='app-wrapper'>
                 <Header/>
                 <Navbar/>
                 <div className='app-wrapper-content'>
-                    <Route path='/dialogs' render={ () => <Dialogs /> }/>
+                    <Route path='/dialogs' render={ () => <Dialogs dialogs={props.dialogs} messages={props.messages}/> }/>
                     <Route path='/profile' render={ () => <Profile posts={ props.posts }/> }/>
                     <Route path='/news' render={ () => <News /> }/>
                     <Route path='/music' render={ () => <Music /> }/>
