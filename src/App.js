@@ -10,6 +10,7 @@ import {BrowserRouter, Route} from "react-router-dom";
 const App = (props) => {
 
     return (
+        <BrowserRouter>
             <div className='app-wrapper'>
                 <Header/>
                 <Navbar/>
@@ -18,7 +19,8 @@ const App = (props) => {
                     <Route path='/profile' render={ () => <Profile state={props.state.profilePage}/> }/>
                     <Route path='/news' render={ () => <News /> }/>
                 </div>
-            </div>)
+            </div>
+        </BrowserRouter>)
 }
 
 export default App;
